@@ -1,0 +1,87 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// html{
+//   overflow-x: hidden;
+// }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+  color: $primary;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 85px;
+}
+
+.title{
+  margin-bottom: 50px;
+}
+
+.btn{
+  color: white;
+  background-color: $primary;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  transition: 0.6s ease all;
+
+  &:hover{
+    background-color: rgba(107, 107, 107, 1);
+  }
+}
+
+.fa{
+  transition: 0.3s ease all;
+  font-size: 24px;
+}
+
+.fa-twitter:hover{
+  color: #4184ff;
+}
+
+.fa-instagram:hover{
+  color: rgb(242, 96, 255);
+}
+
+.fa-facebook:hover{
+  color: rgba(63, 82, 255, 1);
+}

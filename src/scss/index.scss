@@ -1,0 +1,307 @@
+@import '_variables';
+@import '_fonts';
+@import '_base';
+@import '_mixins';
+
+header {
+  margin-top: 50px;
+
+  .container {
+    @include flex;
+
+    .header__left {
+      @include flex;
+
+      img {
+        margin-right: 25px;
+      }
+
+      a {
+        margin-right: 25px;
+      }
+    }
+
+    .header__right {
+
+      a {
+        font-size: 24px;
+        margin-right: 25px;
+        transition: 0.3s ease all;
+      }
+
+      a:last-child {
+        margin-right: 0;
+        margin-left: 25px;
+
+        display: inline-block;
+        font-size: 18px;
+        background-color: $primary;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 2rem;
+
+        &:hover {
+          background-color: rgba(107, 107, 107, 1);
+        }
+      }
+    }
+  }
+}
+
+.first__screen {
+
+  .container {
+    @include flex;
+
+    .first__screen__left {
+
+      h1 {
+        position: relative;
+
+        &:before {
+          content: 'EXTRAORDINARY NFTs';
+          position: absolute;
+          color: $green;
+          font-size: 13px;
+          font-weight: 500;
+          top: -10px;
+        }
+      }
+
+      &__btn {
+        display: inline-block;
+        margin-top: 25px;
+        background-color: $primary;
+        color: white;
+        font-size: 24px;
+        padding: 10px 25px;
+        border-radius: 2rem;
+
+        transition: 0.6s ease all;
+
+        &:hover {
+          background-color: rgba(107, 107, 107, 1);
+        }
+      }
+    }
+
+    img {
+      width: 90%;
+    }
+  }
+}
+
+.frames {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.creators {
+
+  .container {
+
+    h2,
+    .subtitle {
+      text-align: center;
+      width: 610px;
+      margin: 0 auto;
+    }
+
+    .creators__btns {
+      margin-top: 45px;
+
+      a {
+        font-size: 24px;
+        padding: 15px 65px;
+        border: 1px solid $primary;
+        border-radius: 2rem;
+        margin-right: 25px;
+        transition: 0.6s ease all;
+
+        &:hover {
+          color: white;
+          background-color: $primary;
+        }
+      }
+    }
+
+    .creator {
+
+      @include flex;
+      margin-top: 50px;
+
+      div {
+
+        h3 {
+          font-size: 48px;
+          margin-bottom: 15px;
+          position: relative;
+
+          &:before {
+            content: 'Digital Artist';
+            color: $pink;
+            position: absolute;
+            font-size: 16px;
+            top: -10px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.works {
+
+  .container {
+
+    @include flex;
+
+    img {
+      margin-right: 50px;
+    }
+
+    div {
+
+      h2 {
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 25px;
+
+        position: relative;
+
+        &::before {
+          content: 'OUR WORK';
+          position: absolute;
+          font-size: 36px;
+          top: -50px;
+        }
+      }
+
+      a {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+.aspects {
+
+  .container {
+    display: grid;
+    grid-template-columns: 430px 770px;
+    grid-template-rows: 185px 185px 185px;
+    grid-gap: 10px 0;
+
+    .aspect{
+      align-self: end;
+      margin-bottom: 10px;
+      
+      h3{
+        font-size: 36px;
+        margin-bottom: 15px;
+        position: relative;
+
+        &:before{
+          content: '01';
+          position: absolute;
+          font-size: 18px;
+          color:white;
+          background-color: $green;
+          top: -45px;
+          padding: 6px 25px;
+          font-weight: 500;
+          border-radius: 2rem;
+        }
+      }
+    }
+
+    .aspect:nth-child(2) {
+      grid-row: 2 / 3;
+
+      h3{
+
+        &:before{
+          background-color: $pink;
+          content: '02';
+        }
+      }
+    }
+
+    .aspect:nth-child(3) {
+      grid-row: 3 / 4;
+
+      h3{
+
+        &:before{
+          content: '03';
+          background-color: #EAD71B;
+        }
+      }
+    }
+
+    img {
+      grid-row: 1 / 4;
+      grid-column: 2 / 3;
+      justify-self: end;
+    }
+  }
+}
+
+.join{
+  background-color: $green;
+  margin-top: 150px;
+
+  .container{
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 0;
+
+    h1{
+      width: 720px;
+      line-height: 60px;
+    }
+
+    p{
+      width: 565px;
+      display: inline-block;
+      margin: 30px 0;
+    }
+    
+  }
+}
+
+.collections{
+
+  .container{
+    h2{
+      text-align: center;
+    }
+
+    .collections__content{
+     @include flex;
+
+     .collection{
+
+      h3{
+        padding-left:15px;
+        padding-top: 10px;
+        font-size: 24px;
+      }
+     }
+    }
+    
+    .btn{
+      text-align: center;
+    }
+  }
+
+  
+
+  
+}
