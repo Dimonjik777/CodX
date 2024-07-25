@@ -197,20 +197,20 @@ header {
     grid-template-rows: 185px 185px 185px;
     grid-gap: 10px 0;
 
-    .aspect{
+    .aspect {
       align-self: end;
       margin-bottom: 10px;
-      
-      h3{
+
+      h3 {
         font-size: 36px;
         margin-bottom: 15px;
         position: relative;
 
-        &:before{
+        &:before {
           content: '01';
           position: absolute;
           font-size: 18px;
-          color:white;
+          color: white;
           background-color: $green;
           top: -45px;
           padding: 6px 25px;
@@ -223,9 +223,9 @@ header {
     .aspect:nth-child(2) {
       grid-row: 2 / 3;
 
-      h3{
+      h3 {
 
-        &:before{
+        &:before {
           background-color: $pink;
           content: '02';
         }
@@ -235,9 +235,9 @@ header {
     .aspect:nth-child(3) {
       grid-row: 3 / 4;
 
-      h3{
+      h3 {
 
-        &:before{
+        &:before {
           content: '03';
           background-color: #EAD71B;
         }
@@ -252,56 +252,211 @@ header {
   }
 }
 
-.join{
+.join {
   background-color: $green;
   margin-top: 150px;
 
-  .container{
+  .container {
     @include flex;
     flex-direction: column;
     text-align: center;
     padding: 70px 0;
 
-    h1{
+    h1 {
       width: 720px;
       line-height: 60px;
     }
 
-    p{
+    p {
       width: 565px;
       display: inline-block;
       margin: 30px 0;
     }
-    
+
   }
 }
 
-.collections{
+.collections {
 
-  .container{
-    h2{
+  .container {
+
+    h2 {
       text-align: center;
     }
 
-    .collections__content{
-     @include flex;
+    .collections__content {
+      @include flex;
 
-     .collection{
+      .collection {
 
-      h3{
-        padding-left:15px;
-        padding-top: 10px;
-        font-size: 24px;
+        h3 {
+          padding-left: 15px;
+          padding-top: 10px;
+          font-size: 24px;
+        }
       }
-     }
     }
-    
-    .btn{
+
+
+  }
+}
+
+.nfts {
+
+  .container {
+
+    h2 {
       text-align: center;
+    }
+
+    .nft__content {
+      display: grid;
+      grid-template-columns: 332px 332px 332px;
+      grid-gap: 50px;
+      justify-content: space-between;
+
+      .nft {
+
+        display: inline-block;
+
+        .nft__info {
+          @include flex;
+          padding-left: 20px;
+          padding-top: 20px;
+
+          p {
+            display: inline-block;
+            font-weight: 700;
+          }
+
+          .nft__number {
+            font-weight: 500;
+            padding-right: 25px;
+          }
+
+          .nft__view {
+            background-color: rgba(168, 193, 216, 0.2);
+            padding: 12px;
+            cursor: pointer;
+          }
+
+          .nft__lock {
+            background-color: #FF7F96;
+            cursor: pointer;
+            padding: 10px 12px;
+            border-radius: 2rem;
+          }
+        }
+
+
+      }
+    }
+
+    .btn__block {
+      margin-top: 50px;
     }
   }
+}
 
-  
+.faq {
 
-  
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .faq__content {
+
+    .faq__item {
+      cursor: pointer;
+      @include flex;
+      margin-bottom: 50px;
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+footer {
+
+  .container {
+    @include flex;
+    align-items: start;
+
+    div:first-child {
+
+      p {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+
+      a {
+        font-size: 24px;
+        margin-right: 15px;
+      }
+    }
+
+    div:nth-child(2) {
+      @include flex;
+      flex-direction: column;
+      align-items: start;
+
+      p {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+    }
+
+    div:nth-child(3) {
+      @include flex;
+      flex-direction: column;
+      align-items: start;
+
+      p {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+    }
+
+    div:last-child {
+      width: 430px;
+
+      h2{
+        font-weight: 500;
+      }
+
+      form{
+        margin-top: 15px;
+
+        input{
+          cursor: pointer;
+          font-family: 'Outfit', sans-serif;
+        }
+
+        input:first-child{
+          border: none;
+          background-color: #F6F6F6;
+          padding: 10px 15px;
+          padding-right: 55px;
+          border-radius: 2rem;
+          margin-right: 10px;
+          
+          &::placeholder{
+            color: rgba(47, 47, 47, 0.36);
+          }
+        }
+
+        input:last-child{
+          border:none;
+
+          background-color: $primary;
+          color: white;
+          font-size: 18px;
+          padding: 10px 15px;
+          border-radius: 2rem;
+        }
+      }
+    }
+  }
 }
