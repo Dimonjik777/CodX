@@ -16,20 +16,20 @@ header {
         margin-right: 25px;
       }
 
-      .header__link{
+      .header__link {
         margin-right: 25px;
 
-        div{
+        div {
           background-color: $primary;
           width: 100%;
           height: 5px;
           border-radius: 2rem;
           transition: 0.5s ease all;
-          transform:scaleX(0);
+          transform: scaleX(0);
         }
 
-        &:hover{
-          div{
+        &:hover {
+          div {
             transform: scaleX(1);
           }
         }
@@ -59,6 +59,11 @@ header {
           background-color: rgba(107, 107, 107, 1);
         }
       }
+    }
+
+    .navbar {
+      display: none;
+      cursor: pointer;
     }
   }
 }
@@ -106,9 +111,15 @@ header {
   }
 }
 
-.frames {
+.frames,
+.frames__mobile {
   width: 100%;
   margin-bottom: 50px;
+
+}
+
+.frames__mobile {
+  display: none;
 }
 
 .creators {
@@ -138,7 +149,7 @@ header {
           background-color: $primary;
         }
 
-        &:first-child{
+        &:first-child {
           background-color: $primary;
           color: white;
         }
@@ -212,14 +223,17 @@ header {
 .aspects {
 
   .container {
-    display: grid;
-    grid-template-columns: 430px 770px;
-    grid-template-rows: 185px 185px 185px;
-    grid-gap: 10px 0;
+    @include flex;
+
+    .aspects__content {
+      @include flex;
+      flex-direction: column;
+      height: 500px;
+      margin-right: 35px;
+    }
 
     .aspect {
-      align-self: end;
-      margin-bottom: 10px;
+      width: 413px;
 
       h3 {
         font-size: 36px;
@@ -241,7 +255,6 @@ header {
     }
 
     .aspect:nth-child(2) {
-      grid-row: 2 / 3;
 
       h3 {
 
@@ -253,7 +266,6 @@ header {
     }
 
     .aspect:nth-child(3) {
-      grid-row: 3 / 4;
 
       h3 {
 
@@ -265,9 +277,7 @@ header {
     }
 
     img {
-      grid-row: 1 / 4;
-      grid-column: 2 / 3;
-      justify-self: end;
+      width: 100%;
     }
   }
 }
@@ -283,12 +293,12 @@ header {
     padding: 70px 0;
 
     h1 {
-      width: 720px;
+      max-width: 720px;
       line-height: 60px;
     }
 
     p {
-      width: 565px;
+      max-width: 565px;
       display: inline-block;
       margin: 30px 0;
     }
@@ -313,6 +323,15 @@ header {
           padding-left: 15px;
           padding-top: 10px;
           font-size: 24px;
+        }
+
+        img {
+          cursor: pointer;
+          transition: 0.6s ease all;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
     }
@@ -339,6 +358,15 @@ header {
 
         display: inline-block;
 
+        img:first-child {
+          cursor: pointer;
+          transition: 0.6s ease all;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
         .nft__info {
           @include flex;
           padding-left: 20px;
@@ -359,11 +387,11 @@ header {
             padding: 12px;
             cursor: pointer;
             transition: 0.6s ease all;
-            transform:scale(1);
+            transform: scale(1);
 
-            &:hover{
+            &:hover {
               background-color: white;
-              transform:scale(1.3);
+              transform: scale(1.3);
             }
           }
 
@@ -374,11 +402,11 @@ header {
             border-radius: 2rem;
 
             transition: 0.6s ease all;
-            transform:scale(1);
+            transform: scale(1);
 
-            &:hover{
+            &:hover {
               background-color: $primary;
-              transform:scale(1.3);
+              transform: scale(1.3);
             }
           }
         }
@@ -409,6 +437,10 @@ header {
       p {
         font-size: 24px;
       }
+
+      img {
+        margin-left: 15px;
+      }
     }
   }
 }
@@ -418,6 +450,7 @@ footer {
   .container {
     @include flex;
     align-items: start;
+    margin-bottom: 25px;
 
     div:first-child {
 
@@ -457,33 +490,33 @@ footer {
     div:last-child {
       width: 430px;
 
-      h2{
+      h2 {
         font-weight: 500;
       }
 
-      form{
+      form {
         margin-top: 15px;
 
-        input{
+        input {
           cursor: pointer;
           font-family: 'Outfit', sans-serif;
         }
 
-        input:first-child{
+        input:first-child {
           border: none;
           background-color: #F6F6F6;
           padding: 10px 15px;
           padding-right: 55px;
           border-radius: 2rem;
           margin-right: 10px;
-          
-          &::placeholder{
+
+          &::placeholder {
             color: rgba(47, 47, 47, 0.36);
           }
         }
 
-        input:last-child{
-          border:none;
+        input:last-child {
+          border: none;
 
           background-color: $primary;
           color: white;
@@ -495,3 +528,5 @@ footer {
     }
   }
 }
+
+@import '_breakpoints';
