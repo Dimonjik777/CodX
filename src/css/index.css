@@ -824,6 +824,9 @@ footer .container div:last-child form input:last-child {
     margin-left: 20px;
     margin-top: 25px;
   }
+  footer form input {
+    margin-top: 25px;
+  }
   .aspects .container img {
     width: 80%;
   }
