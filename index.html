@@ -61,12 +61,12 @@
       <p class="subtitle">Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et magna
         at</p>
       <div class="creators__btns">
-        <a href="#">Jack</a>
-        <a href="#">Suni</a>
-        <a href="#">Colin</a>
+        <button class="creator__active" onclick="chooseCreator(0)">Jack</button>
+        <button onclick="chooseCreator(1)">Suni</button>
+        <button onclick="chooseCreator(2)">Colin</button>
       </div>
       <div class="creator">
-        <img src="src/img/digital artist.png" alt="">
+        <img src="src/img/digital artist-0.png" alt="">
         <div>
           <h3>Jack Nilson</h3>
           <p>Suspendisse ante mauris, volutpat congue sem ac, ultrices tempor lorem. Nullam eget vehicula tellus, ac
@@ -261,6 +261,7 @@
     </div>
   </footer>
 
+  <script src="src/js/index.js"></script>
 </body>
 
 </html>

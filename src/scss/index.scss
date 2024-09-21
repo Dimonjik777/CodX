@@ -136,20 +136,22 @@ header {
     .creators__btns {
       margin-top: 45px;
 
-      a {
+      button {
         font-size: 24px;
         padding: 15px 65px;
         border: 1px solid $primary;
         border-radius: 2rem;
         margin-right: 25px;
         transition: 0.6s ease all;
+        background-color: white;
+        cursor: pointer;
 
         &:hover {
           color: white;
           background-color: $primary;
         }
 
-        &:first-child {
+        &.creator__active {
           background-color: $primary;
           color: white;
         }
@@ -167,6 +169,7 @@ header {
           font-size: 48px;
           margin-bottom: 15px;
           position: relative;
+          transition: 0.3s ease all;
 
           &:before {
             content: 'Digital Artist';
@@ -181,6 +184,7 @@ header {
 
       img {
         width: 100%;
+        transition: 0.3s ease all;
       }
     }
   }
